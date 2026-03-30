@@ -1,16 +1,20 @@
 :root {
-  --black: #000000ff;
-  --prussian-blue: #14213dff;
-  --orange: #fca311ff;
-  --alabaster-grey: #e5e5e5ff;
-  --white: #ffffffff;
-  --bg-1: #05070f;
-  --bg-2: #0b1328;
-  --panel: rgba(20, 33, 61, 0.55);
-  --panel-strong: rgba(20, 33, 61, 0.82);
-  --line: rgba(252, 163, 17, 0.28);
-  --text-soft: #b9c4dd;
-  --glow: 0 0 24px rgba(252, 163, 17, 0.25);
+  --black: #000000;
+  --white: #ffffff;
+  --primary: #6d28d9;
+  --primary-light: #8b5cf6;
+  --primary-dark: #5b21b6;
+  --secondary: #7e22ce;
+  --accent: #a855f7;
+  --bg-1: #faf7ff;
+  --bg-2: #f3f0ff;
+  --panel: rgba(109, 40, 217, 0.08);
+  --panel-strong: rgba(109, 40, 217, 0.12);
+  --line: rgba(109, 40, 217, 0.15);
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --glow: 0 0 24px rgba(109, 40, 217, 0.1);
 }
 
 * {
@@ -19,23 +23,19 @@
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-}
-
-body {
   font-family: Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  color: var(--alabaster-grey);
+  color: var(--text-primary);
   background:
-    radial-gradient(circle at 15% 10%, rgba(252, 163, 17, 0.12), transparent 30%),
-    radial-gradient(circle at 90% 20%, rgba(99, 102, 241, 0.12), transparent 35%),
+    radial-gradient(circle at 15% 10%, rgba(109, 40, 217, 0.03), transparent 30%),
+    radial-gradient(circle at 90% 20%, rgba(168, 85, 247, 0.03), transparent 35%),
     linear-gradient(170deg, var(--bg-1), var(--bg-2));
 }
 
 a {
-  color: var(--orange);
+  color: var(--primary);
   text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {

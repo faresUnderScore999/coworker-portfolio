@@ -1,13 +1,12 @@
 <template>
   <section id="contact" class="contact">
     <h2>📬 Contact</h2>
-    <p>Open to full-stack roles, freelance projects, and technical collaborations.</p>
-
+    <p>Open to IT architecture, cloud computing roles, and software development opportunities.</p>
     <div class="contact-grid">
-      <a href="mailto:benalifares999@gmail.com">✉️ benalifares999@gmail.com</a>
-      <a href="tel:+21651767126">📞 +216 51 767 126</a>
-      <a href="https://github.com/faresUnderScore999" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
-      <a href="https://www.linkedin.com/in/fares-ben-ali-1060872a4/" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+      <a href="mailto:Ikbelbouzouita20@gmail.com">✉️ Ikbelbouzouita20@gmail.com</a>
+      <a href="tel:+21656229549">📞 +216 56 229 549</a>
+      <a href="tel:+21650988691">📞 +216 50 988 691</a>
+      <a href="https://www.linkedin.com/in/ikbel-bouzouita/" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
     </div>
   </section>
 </template>
@@ -20,11 +19,11 @@ export default {
 
 <style scoped>
 .contact {
-  background: linear-gradient(145deg, color-mix(in srgb, var(--panel) 86%, var(--black)), #101a33);
+  background: linear-gradient(145deg, color-mix(in srgb, var(--panel) 86%, var(--pastel-pink)), #f8e6ed);
   border-radius: 16px;
   padding: 2.2rem 1.4rem;
   text-align: center;
-  box-shadow: var(--glow), 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--glow), 0 10px 30px rgba(192, 132, 151, 0.35);
 }
 
 h2 {
@@ -47,7 +46,7 @@ p {
   padding: 0.75rem 0.8rem;
   border-radius: 10px;
   background: color-mix(in srgb, var(--panel-strong) 84%, transparent);
-  color: var(--alabaster-grey);
+      color: var(--text-soft)
   text-decoration: none;
   border: 1px solid var(--line);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -55,7 +54,7 @@ p {
 
 .contact-grid a:hover {
   transform: translateY(-3px);
-  box-shadow: var(--glow), 0 8px 18px rgba(20, 33, 61, 0.35);
-  border-color: var(--orange);
+  box-shadow: var(--glow), 0 8px 18px rgba(192, 132, 151, 0.35);
+  border-color: var(--old-rose);
 }
 </style>

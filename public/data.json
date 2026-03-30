@@ -4,7 +4,7 @@
     "imageurl": [
       "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774582875/chkoba1_qlkv7k.png",
       "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774583056/chkoba2_fo5mu7.png",
-      "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774583058/chkoba3_ydfpf3.png"
+      "https://res.cloudinary.com/dn2极jd2fq/image/upload/v1774583058/chkoba3_ydfpf3.png"
     ],
     "title": "Multiplayer Online Card Game",
     "emoji": "🃏",
@@ -15,42 +15,40 @@
     "index": 1,
     "imageurl": [
       "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774583508/travagir1_ppvkgn.png",
-      "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774583515/travagir2_lqjopl.png",
+      "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774583515/travagir2_lqjopl极png",
       "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774583526/travagir3_vlq3vf.png",
       "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774583539/travagir4_sliezj.png"
     ],
     "title": "travel agency website",
     "emoji": "✈️",
-    "description": "🌍 Travigir-PI\nTravigir-PI est une plateforme de gestion de voyages et de loisirs, développée dans le cadre du PIDEV, combinant :\n\nune application desktop JavaFX\nune application web Symfony 6.4\nLe projet repose sur une séparation claire des responsabilités entre Voyageurs (utilisateurs finaux) et Administrateurs (gestionnaires), sur les deux plateformes.\n\n🧱 Architecture Générale (Approche PIDEV)\nL’organisation du projet suit une structure classique, efficace et réaliste, adaptée aux systèmes professionnels de voyage.\n\n👉 Les responsabilités sont séparées selon :\n\nle rôle (Voyageur / Admin)\nla plateforme (Web / Desktop)\n👤 Côté Voyageur (Utilisateur Final)\nLe voyageur consomme les services et interagit avec le système.\n\n🌐 Web – Front-Office (Interface principale)\nC’est la vitrine publique du projet.\n\nFonctionnalités :\n\nConsultation du catalogue de voyages et d’activités\nRéservations de services\nGestion du profil client\nInteraction avec l’IA\n(ex : recommandations de destinations, suggestions personnalisées)\n🖥️ Java – Front-Office (Client Desktop)\nDans le contexte PIDEV, cette partie correspond à une :\n\nborne interactive\nou application desktop client\nFonctionnalités :\n\nInterface simplifiée pour consulter les offres\nRecherche rapide de disponibilités\nConsultation des réservations personnelles\n🛠️ Côté Administrateur (Gestionnaire)\nL’administrateur supervise, valide et configure le système.\n\n🌐 Web – Back-Office (Administration en ligne)\nInterface de gestion accessible via navigateur.\n\nFonctionnalités :\n\nTableaux de bord (dashboards)\nValidation des réservations et paiements\nGestion des reclamation voyageurs\n⚠️ Important\n\nInterdiction d’utiliser EasyAdmin ou AdminBundle\nToutes les vues et fonctionnalités sont développées manuellement\n🖥️ Java – Back-Office (Application lourde Desktop)\nApplication de gestion avancée destinée aux administrateurs.\n\nFonctionnalités :\n\nGestion des trips\nStatistiques détaillées\nExport de données\nConfiguration technique du système\n🧩 Composants du Projet\n1️⃣ Desktop Application – JavaFX (Sprint 1)\nTechnologies\nJava\nJavaFX (UI)\nJDBC\nMaven\nFonctionnalités clés\nCRUD complet sur les entités\nValidation stricte des entrées utilisateur\nIntégration d’API externes (ex : Google Maps)\nGestion d’images via URLs (pas de stockage BDD)\n2️⃣ Web Application – Symfony 6.4 (Sprint 2)\nTechnologies\nPHP 8\nSymfony 6.4\nTwig\nDoctrine ORM\nFonctionnalités clés\nFront-office responsive et ergonomique\nBack-office sécurisé (fait main)\nAuthentification & autorisation (sans FOSUserBundle)\nFormulaires avancés avec validation\nLogique métier complexe\n(calculs de prix, génération de PDF, IA, etc.)\n🎯 Objectifs du Projet\nSéparation claire des responsabilités\nSécurité et validation réelles\nArchitecture maintenable et évolutive\nMise en pratique concrète du full-stack\n👨‍💻 Auteur\nFares Ben\nFull-Stack Developer — Java | Symfony | Web",
+    "description": "Travel agency website built with modern web technologies.",
     "link": "https://travarig-voyage.vercel.app"
   },
-
-{
-  "index": 3,
-  "imageurl": [
-    "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774586054/repower1_iugisg.png",
-    "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774586058/repower2_nqi91z.png",
-    "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774586062/repower3_svdkce.png",
-    "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774586068/repower4_r2q5ty.png"
-  ],
-  "title": "E-Technologie Repower",
-  "emoji": "🌱",
-  "description": "🌱 Repower\n\n📋 Project Overview\nRepower is a modern web application dedicated to promoting sustainable energy practices and empowering communities to take action on environmental challenges. The platform provides information, resources, and ways for users to get involved in renewable energy initiatives and contribute to a more sustainable future.\n\n✨ What It Does\nRepower offers:\n\n📚 Educational Content - Learn about renewable technologies and their impact\n🤝 Community Engagement - Get involved with local sustainability initiatives\n💳 Donation Support - Contribute financially to environmental projects\n🛠️ Resource Hub - Access tools and information about clean energy solutions\n🚀 Technology Showcase - Discover cutting-edge sustainable technologies\n\n💡 Why We Made It\nWe created Repower to address the urgent need for accessible information and engagement around renewable energy and environmental sustainability. By combining education, community building, and actionable ways to contribute, we aim to accelerate the transition to cleaner energy sources and inspire meaningful climate action.\n\n🛠️ Technologies\nThis project is built with:\n\nNuxt 3 - Vue.js framework for building server-side rendered applications\nVue 3 - Progressive JavaScript framework for user interfaces\nTypeScript - Type-safe JavaScript development\nModern Web Standards - Responsive design and accessible components\n\n📦 Prerequisites\nNode.js 16+ installed on your system\nnpm, pnpm, yarn, or bun package manager\n\n📁 Project Structure\n/app - Main application components and pages\n/pages - Route pages (about, contact, donate, get-involved, technology)\n/components - Reusable Vue components\n/layouts - Application layout templates\n/public - Static assets\nnuxt.config.ts - Nuxt configuration\ntsconfig.json - TypeScript configuration",
-  "link": "https://repower-xi.vercel.app"
-},
-{
-  "index": 4,
-  "imageurl": [
-    "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774587264/pfe1_qfqedq.png",
-    "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774587268/pfe2_jul8c6.png",
-    "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774587274/pfe3_k7znrm.png",
-    "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774587279/pfe4_lsleiz.png",
-    "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774587282/pfe5_pf2dfx.png"
-  ],
-  "title": "Wledi – E‑Learning Platform",
-  "emoji": "📚",
-  "description": "📚 Wledi – E‑Learning Platform\n\n📋 Project Overview\nWledi is a comprehensive e‑learning platform developed as a final‑year project in collaboration with Audasoft. It provides a unified environment for administrators, teachers, and students to manage educational content, schedule live sessions, and communicate in real time.\n\n✨ Key Features\n\n📖 Course Management – Teachers can create courses, organize them into chapters, and upload documents (text, images, videos).\n📅 Live Sessions – Schedule live events via calendar; students request approval and join real‑time video/audio streams.\n💬 Real‑Time Communication – Direct chat between students and teachers; integrated notification system for messages and updates.\n👩‍🏫 Teacher Profiles – Public profiles with stats (courses, likes, followers) and user feedback.\n❤️ User Engagement – Follow teachers, like courses, save favorites, and give feedback.\n\n🛠️ Technologies\n\nBackend: Go with Gin framework, MongoDB Atlas, WebSocket for real‑time features\nFrontend: Nuxt.js (Vue.js), Element UI for components\nTools: Postman (API testing), Draw.io (diagrams), GitHub (version control)\n\n🏗️ Architecture\n\n3‑tier architecture with a clear separation of concerns:\n- Presentation: Nuxt.js frontend\n- Application: GoGin REST API\n- Data: MongoDB Atlas\n\n📦 Development Methodology\n\nScrum agile approach with 5 sprints, each delivering incremental features: workspace setup, course management, live sessions, teacher profiles, and communication tools.\n\n🎯 Future Perspectives\n\n- Subscription & payment system\n- Mobile application with Flutter\n\n👨‍💻 Author\nFares Ben – Full‑Stack Developer (Go, Vue.js, Nuxt.js)",
-  "link": ""
-}
-
+  {
+    "index": 3,
+    "极mageurl": [
+      "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774586054/repower1_iugisg.png",
+      "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774586058/repower2_nqi91z.png",
+      "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774586062/repower3_svdkce.png",
+      "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774586068/repower4_r2q5ty.png"
+    ],
+    "title": "E-Technologie Repower",
+    "emoji": "🌱",
+    "description": "Sustainable energy platform built with modern web technologies.",
+    "link": "https://repower-xi.vercel.app"
+  },
+  {
+    "index": 4,
+    "imageurl": [
+      "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774587264/pfe1_qfqedq.png",
+      "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774587268/pfe2_jul8c6.png",
+      "https://res.cloudinary.com/dn2rjd2fq/image/upload/v1774587274/pfe3_k7znrm.png",
+      "https://res.cloudinary.com/dn2rjd2fq/image/upload/v177458727极9/pfe4_lsleiz.png",
+      "https://res.cloudinary.com/dn2rjd2fq/image/upload/v极774587282/pfe5_pf2dfx.png"
+    ],
+    "title": "Wledi – E-Learning Platform",
+    "emoji": "📚",
+    "description": "Comprehensive e-learning platform developed as a final-year project. Features course management, live sessions, and real-time communication.",
+    "link": ""
+  }
 ]

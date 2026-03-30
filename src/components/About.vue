@@ -2,23 +2,23 @@
   <section id="about" class="about card">
     <div class="intro-layout">
       <div class="intro-text">
-        <p class="eyebrow">🛠️ Full Stack Developer</p>
-        <h1>Hi, I'm Fares Ben Ali</h1>
+        <p class="eyebrow">🎓 IT Architecture & Cloud Computing Student</p>
+        <h1>Hi, I'm Ikbel Bouzouita</h1>
         <p class="lead">
-          Passionate about web development, electronics, and technical problem-solving. I build modern full-stack apps using Vue/Nuxt, Node.js, and Go (Gin), and I enjoy turning complex ideas into practical, reliable solutions.
+          Passionate about cloud infrastructures, DevOps, and software development. I have experience in virtualization, infrastructure supervision, web development, and artificial intelligence. I'm eager to deepen my skills in digital engineering and data engineering in an international technological environment.
         </p>
       </div>
 
       <img
         class="profile-photo"
-        src="https://media.licdn.com/dms/image/v2/D5603AQHzEimaHye1uw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1728967101373?e=1776297600&v=beta&t=uMR5IOiiFm9-V8UKDjBWpFTRuzi14ozUJwGt8BnglxY"
-        alt="Fares Ben Ali profile photo"
+        src="https://media.licdn.com/dms/image/v2/C5603AQGsfEntvEOYUw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1647527165578?e=1776297600&v=beta&t=IQnvr4BR0lvzp4UtPo5YZ4yNtKrJ-gwbOH4cSviMGA0"
+        alt="Ikbel Bouzouita profile photo"
         loading="lazy"
       />
     </div>
     <div class="meta">
-      <span>📍 Tunis, Tunisia</span>
-      <span>🗣️ Arabic · French · English</span>
+      <span>📍 Manar 1, Tunis, 2062</span>
+      <span>🗣️ Arabic (Native) · French (Good) · English (Good) · Spanish (Intermediate)</span>
       <span>✅ Available for opportunities</span>
     </div>
   </section>
@@ -32,12 +32,12 @@ export default {
 
 <style scoped>
 .card {
-  background: linear-gradient(160deg, color-mix(in srgb, var(--panel-strong) 85%, var(--black)), #141d3a);
-  color: var(--alabaster-grey);
+  background: linear-gradient(160deg, var(--white), var(--bg-1));
+  color: var(--text-primary);
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 2.5rem 2rem;
-  box-shadow: var(--glow), 0 20px 45px rgba(0, 0, 0, 0.45);
+  box-shadow: var(--glow), 0 20px 45px rgba(0, 0, 0, 0.08);
 }
 
 .intro-layout {
@@ -55,10 +55,11 @@ export default {
   display: inline-block;
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
-  background: rgba(252, 163, 17, 0.2);
-  color: var(--orange);
+  background: rgba(109, 40, 217, 0.1);
+  color: var(--primary);
   font-size: 0.85rem;
   margin-bottom: 1rem;
+  font-weight: 500;
 }
 
 .profile-photo {
@@ -67,22 +68,25 @@ export default {
   object-fit: cover;
   object-position: center top;
   border-radius: 999px;
-  border: 3px solid var(--orange);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  border: 3px solid var(--primary-light);
+  box-shadow: 0 10px 25px rgba(109, 40, 217, 0.15);
   margin-inline: auto;
 }
 
 h1 {
   margin: 0;
   font-size: clamp(1.8rem, 4vw, 3rem);
-  color: var(--white);
+  color: var(--text-primary);
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .lead {
   margin-top: 1rem;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.8;
   max-width: 900px;
+  color: var(--text-secondary);
 }
 
 .meta {
@@ -95,9 +99,10 @@ h1 {
 .meta span {
   padding: 0.35rem 0.65rem;
   border-radius: 8px;
-  background: rgba(229, 229, 229, 0.08);
+  background: rgba(109, 40, 217, 0.05);
   border: 1px solid var(--line);
   font-size: 0.9rem;
+  color: var(--text-secondary);
 }
 
 @media (max-width: 768px) {

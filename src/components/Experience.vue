@@ -3,23 +3,42 @@
     <h2>💼 Experience</h2>
 
     <article class="timeline-item">
-      <h3>🚀 Full Stack Developer Intern — Audasoft Technology</h3>
-      <p class="period">Apr 2024 — Sep 2024</p>
+      <h3>🚀 Application Web – Gestion des employés (Stage)</h3>
+      <p class="period">2024 — Billcom</p>
       <ul>
-        <li>Built an e-learning platform using Vue.js/Nuxt.js for frontend and Go (Gin) for backend.</li>
-        <li>Implemented dashboards for students and teachers, course management, and live session planning.</li>
-        <li>Integrated realtime interactions with WebRTC and notification/feedback systems.</li>
-        <li>Worked on scalable data handling and reliable backend services.</li>
+        <li>Développement d'une application web pour la gestion des employés dans l'entreprise Billcom</li>
+        <li>Technologies utilisées: Spring Boot, Angular, MySQL</li>
+        <li>Conception et implémentation de fonctionnalités complètes de gestion RH</li>
       </ul>
     </article>
 
     <article class="timeline-item">
-      <h3>🏍️ Motorcycle Mechanic (Freelance)</h3>
-      <p class="period">2024 — Present</p>
+      <h3>🎓 Plateforme Cloud – Gestion des abonnements de services Cloud (Projet de fin d'étude)</h3>
+      <p class="period">2024 — ESPRIT</p>
       <ul>
-        <li>Diagnose and repair complex mechanical/electrical issues (STVA, sensors, regulators, injectors).</li>
-        <li>Read and apply official service manuals and electrical schematics.</li>
-        <li>Use practical diagnostic tools (multimeter, oscilloscope) and welding techniques.</li>
+        <li>Développement d'une application web permettant la gestion des abonnements et des services cloud</li>
+        <li>Technologies: Node.js, Express.js, React.js, MongoDB</li>
+        <li>Architecture cloud moderne avec gestion des utilisateurs et des services</li>
+      </ul>
+    </article>
+
+    <article class="timeline-item">
+      <h3>💻 Application Desktop – Gestion des employés d'un laboratoire d'analyse</h3>
+      <p class="period">2023 — Projet Académique</p>
+      <ul>
+        <li>Conception d'une application desktop permettant la gestion des employés et des données d'un laboratoire</li>
+        <li>Technologies: Java, Java Swing, Eclipse, SQL Server</li>
+        <li>Interface utilisateur intuitive avec gestion complète des données</li>
+      </ul>
+    </article>
+
+    <article class="timeline-item">
+      <h3>🏢 Application Desktop – Gestion des employés dans une faculté</h3>
+      <p class="period">2023 — Projet Académique</p>
+      <ul>
+        <li>Développement d'un système de gestion des employés pour une faculté</li>
+        <li>Technologies: Java, NetBeans, MySQL</li>
+        <li>Gestion complète des données des employés et des départements</li>
       </ul>
     </article>
   </section>
@@ -45,7 +64,7 @@ h2 {
 }
 
 .timeline-item {
-  border: 1px solid color-mix(in srgb, var(--prussian-blue) 20%, var(--alabaster-grey));
+  border: 1px solid color-mix(in srgb, var(--old-rose) 20%, var(--pastel-pink));
   border-radius: 12px;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -58,13 +77,13 @@ h2 {
 
 .timeline-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(20, 33, 61, 0.16);
-  border-color: var(--orange);
+  box-shadow: 0 10px 20px rgba(192, 132, 151, 0.16);
+  border-color: var(--old-rose);
 }
 
 h3 {
   margin: 0 0 0.3rem;
-  color: var(--orange);
+  color: var(--old-rose);
 }
 
 .period {

@@ -4,9 +4,10 @@
 
     <main v-if="!selectedProject">
       <About />
+      <Education />
       <Skills />
-      <Projects :projects="projects" @open-project="openProject" />
       <Experience />
+      <Projects :projects="projects" @open-project="openProject" />
       <Contact />
     </main>
 
@@ -21,6 +22,7 @@
 <script>
 import Header from './components/Header.vue';
 import About from './components/About.vue';
+import Education from './components/Education.vue';
 import Skills from './components/Skills.vue';
 import Experience from './components/Experience.vue';
 import Projects from './components/Projects.vue';
@@ -33,6 +35,7 @@ export default {
   components: {
     Header,
     About,
+    Education,
     Skills,
     Experience,
     Projects,
@@ -48,7 +51,7 @@ export default {
     };
   },
   async mounted() {
-    await this.loadProjects();
+    await Promise.all([this.loadProjects()]);
     window.addEventListener('hashchange', this.handleHashRoute);
     this.handleHashRoute();
 
@@ -154,7 +157,7 @@ section {
   border: 1px solid var(--line);
   opacity: 0.2;
   transform: translateY(24px) scale(0.99);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+      transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .details-view {

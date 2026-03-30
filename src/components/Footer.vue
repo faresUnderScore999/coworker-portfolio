@@ -1,6 +1,6 @@
 <template>
   <footer class="main-footer">
-    <p>© {{ currentYear }} Fares Ben Ali — Full Stack Developer ⚡</p>
+    <p>© {{ currentYear }} Ikbel Bouzouita — IT Architecture & Cloud Computing Student ⚡</p>
   </footer>
 </template>
 
@@ -20,10 +20,10 @@ export default {
   margin-top: 2rem;
   padding: 1.25rem;
   text-align: center;
-  color: var(--alabaster-grey);
-  background: color-mix(in srgb, var(--panel-strong) 88%, var(--black));
+  color: var(--text-muted);
+  background: var(--bg-1);
   border-top: 1px solid var(--line);
-  box-shadow: 0 -10px 35px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 -10px 35px rgba(109, 40, 217, 0.08);
 }
 
 p {
