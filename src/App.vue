@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <Header />
-
     <main v-if="!selectedProject">
       <About />
       <Education />
@@ -10,11 +9,9 @@
       <Projects :projects="projects" @open-project="openProject" />
       <Contact />
     </main>
-
     <main v-else class="details-view">
       <ProjectDetails :project="selectedProject" @back="goHome" />
     </main>
-
     <Footer />
   </div>
 </template>
@@ -54,14 +51,12 @@ export default {
     await Promise.all([this.loadProjects()]);
     window.addEventListener('hashchange', this.handleHashRoute);
     this.handleHashRoute();
-
     if (!this.selectedProject) {
       this.$nextTick(() => this.setupSectionObserver());
     }
   },
   beforeUnmount() {
     window.removeEventListener('hashchange', this.handleHashRoute);
-
     if (this.observer) {
       this.observer.disconnect();
     }
@@ -81,7 +76,6 @@ export default {
       if (this.observer) {
         this.observer.disconnect();
       }
-
       this.observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -91,16 +85,14 @@ export default {
             }
           });
         },
-        { threshold: 0.15 }
+        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
       );
-
       document.querySelectorAll('section').forEach((section) => {
         this.observer.observe(section);
       });
     },
     handleHashRoute() {
       const match = window.location.hash.match(/^#project\/(\d+)$/);
-
       if (match) {
         const index = Number(match[1]);
         this.selectedProject = this.projects[index] || null;
@@ -117,10 +109,8 @@ export default {
     },
     goHome() {
       this.selectedProject = null;
-
       const cleanUrl = `${window.location.pathname}${window.location.search}`;
       window.history.pushState(null, '', cleanUrl);
-
       this.$nextTick(() => {
         this.setupSectionObserver();
         const projectsSection = document.getElementById('projects');
@@ -143,21 +133,27 @@ main {
   flex: 1;
   width: min(1200px, calc(100% - 2rem));
   margin: 1.25rem auto 0;
-  padding-top: 1.5rem; /* add spacing below sticky header */
+  padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 section {
   scroll-margin-top: 88px;
-  padding: 40px 20px;
+  padding: 48px 32px;
   margin: 0;
   max-width: 100%;
-  border: 1px solid var(--line);
-  opacity: 0.2;
-  transform: translateY(24px) scale(0.99);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  border: 1px solid var(--line-light);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+section:hover {
+  box-shadow: var(--shadow-md);
 }
 
 .details-view {
@@ -166,17 +162,18 @@ section {
 
 section.is-visible {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
 }
 
 @media (max-width: 768px) {
   main {
     width: calc(100% - 1rem);
     margin-top: 0.75rem;
+    gap: 1rem;
   }
-
+  
   section {
-    padding: 28px 16px;
+    padding: 28px 20px;
   }
 }
 </style>

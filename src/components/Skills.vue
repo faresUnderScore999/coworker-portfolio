@@ -3,8 +3,9 @@
     <h2>🧩 Skills</h2>
     <div class="skills-grid">
       <article class="skill-category">
-        <h3>💻 Programming Languages</h3>
-        <ul>
+        <div class="category-icon">💻</div>
+        <h3>Programming Languages</h3>
+        <ul class="skill-list">
           <li>Java</li>
           <li>Python</li>
           <li>JavaScript</li>
@@ -12,10 +13,10 @@
           <li>MATLAB</li>
         </ul>
       </article>
-
       <article class="skill-category">
-        <h3>🌐 Web Development</h3>
-        <ul>
+        <div class="category-icon">🌐</div>
+        <h3>Web Development</h3>
+        <ul class="skill-list">
           <li>HTML/CSS</li>
           <li>Angular</li>
           <li>React.js</li>
@@ -25,10 +26,10 @@
           <li>Symfony</li>
         </ul>
       </article>
-
       <article class="skill-category">
-        <h3>☁️ Cloud & DevOps</h3>
-        <ul>
+        <div class="category-icon">☁️</div>
+        <h3>Cloud & DevOps</h3>
+        <ul class="skill-list">
           <li>Docker</li>
           <li>VMware</li>
           <li>Vagrant</li>
@@ -37,10 +38,10 @@
           <li>MongoDB</li>
         </ul>
       </article>
-
       <article class="skill-category">
-        <h3>🛠️ Tools & Design</h3>
-        <ul>
+        <div class="category-icon">🛠️</div>
+        <h3>Tools & Design</h3>
+        <ul class="skill-list">
           <li>Eclipse</li>
           <li>Visual Studio</li>
           <li>Android Studio</li>
@@ -64,92 +65,97 @@ export default {
 <style scoped>
 .skills {
   background: var(--white);
-  border-radius: 16px;
-  padding: 2.2rem 1.4rem;
-  box-shadow: var(--glow), 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 h2 {
   text-align: center;
   margin-top: 0;
+  margin-bottom: 2rem;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
 }
 
 .skill-category {
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 1rem;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: all var(--transition-base);
   background: var(--bg-1);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
 }
 
 .skill-category:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 22px rgba(109, 40, 217, 0.1);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
   border-color: var(--primary-light);
 }
 
+.skill-category:hover::before {
+  transform: scaleX(1);
+}
+
+.category-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
 h3 {
-  margin-top: 0;
-  color: var(--primary);
-  font-size: 1.1rem;
+  margin: 0 0 1rem;
+  color: var(--text-primary);
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
-li {
-  color: var(--text-secondary);
-  margin-bottom: 0.25rem;
-}
-
-ul {
+.skill-list {
+  list-style: none;
   margin: 0;
-  padding-left: 1rem;
-}
-
-.state {
-  margin: 0.2rem 0 0.6rem;
-  color: var(--text-muted);
-  font-size: 0.92rem;
-}
-
-.state.error {
-  color: #ef4444;
-}
-
-.deep-skills {
-  margin-top: 0.9rem;
-  display: grid;
-  gap: 0.7rem;
-}
-
-.deep-group h4 {
-  margin: 0 0 0.35rem;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-.chips {
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  gap: 0.5rem;
 }
 
-.chip {
-  font-size: 0.78rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 0.2rem 0.55rem;
+.skill-list li {
   color: var(--text-secondary);
-  background: rgba(109, 40, 217, 0.05);
+  font-size: 0.9rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--panel);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-light);
+  transition: all var(--transition-fast);
 }
 
-.repo-note {
-  margin-top: 0.8rem;
-  color: var(--text-muted);
-  font-size: 0.8rem;
+.skill-list li:hover {
+  background: var(--primary-50);
+  color: var(--primary-dark);
+  border-color: var(--primary-light);
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skill-category {
+    padding: 1.25rem;
+  }
 }
 </style>

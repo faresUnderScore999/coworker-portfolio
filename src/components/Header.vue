@@ -1,30 +1,29 @@
 <template>
   <header class="main-header">
     <nav class="navbar">
-      <a href="#about" class="logo" @click="navigate('#about')">🌸 Ikbel Bouzouita</a>
-
-      <button
-        class="menu-toggle"
-        type="button"
-        :aria-expanded="menuOpen ? 'true' : 'false'"
-        aria-label="Toggle navigation menu"
+      <a href="#about" class="logo" @click="navigate('#about')">
+        <span class="logo-icon">🌸</span> Ikbel Bouzouita
+      </a>
+      <button 
+        class="menu-toggle" 
+        type="button" 
+        :aria-expanded="menuOpen ? 'true' : 'false'" 
+        aria-label="Toggle navigation menu" 
         @click="menuOpen = !menuOpen"
       >
         <span></span>
         <span></span>
         <span></span>
       </button>
-
       <ul class="nav-links" :class="{ open: menuOpen }">
         <li><a :class="{ active: currentSection === '#about' }" href="#about" @click.prevent="navigate('#about')">👤 About</a></li>
+        <li><a :class="{ active: currentSection === '#education' }" href="#education" @click.prevent="navigate('#education')">🎓 Education</a></li>
         <li><a :class="{ active: currentSection === '#skills' }" href="#skills" @click.prevent="navigate('#skills')">🧠 Skills</a></li>
         <li><a :class="{ active: currentSection === '#experience' }" href="#experience" @click.prevent="navigate('#experience')">💼 Experience</a></li>
         <li><a :class="{ active: currentSection === '#projects' }" href="#projects" @click.prevent="navigate('#projects')">📂 Projects</a></li>
         <li><a :class="{ active: currentSection === '#contact' }" href="#contact" @click.prevent="navigate('#contact')">📬 Contact</a></li>
       </ul>
     </nav>
-
-
   </header>
 </template>
 
@@ -41,6 +40,7 @@ export default {
     sectionLabel() {
       const labels = {
         '#about': 'ABOUT',
+        '#education': 'EDUCATION',
         '#skills': 'SKILLS',
         '#experience': 'EXPERIENCE',
         '#projects': 'PROJECTS',
@@ -78,18 +78,17 @@ export default {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding-top: 0.25rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line-light);
+  box-shadow: var(--shadow-sm);
 }
 
 .navbar {
   max-width: 1200px;
   margin: 0 auto;
   min-height: 72px;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -103,35 +102,56 @@ export default {
   font-weight: 700;
   letter-spacing: 0.3px;
   white-space: nowrap;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: transform var(--transition-base);
+}
+
+.logo:hover {
+  transform: scale(1.02);
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 1.3rem;
 }
 
 .menu-toggle {
   display: none;
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
   border: 1px solid var(--line);
-  background: transparent;
+  background: var(--white);
   cursor: pointer;
-  padding: 8px;
+  padding: 10px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 5px;
+  transition: all var(--transition-base);
+}
+
+.menu-toggle:hover {
+  background: var(--primary-50);
+  border-color: var(--primary-light);
 }
 
 .menu-toggle span {
-  width: 18px;
+  width: 20px;
   height: 2px;
   background: var(--text-primary);
   display: block;
+  border-radius: 2px;
+  transition: all var(--transition-base);
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.25rem;
+  gap: 0.5rem;
   margin: 0;
   padding: 0;
 }
@@ -140,25 +160,23 @@ export default {
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.95rem;
-  transition: all 0.25s ease;
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
+  font-weight: 500;
+  transition: all var(--transition-base);
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius-md);
+  display: block;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--primary);
-  background: rgba(109, 40, 217, 0.08);
+  background: var(--primary-50);
 }
 
 .nav-links a.active {
-  background: rgba(109, 40, 217, 0.12);
-  font-weight: 500;
+  background: var(--primary-100);
+  font-weight: 600;
 }
-
-
-
-
 
 @media (max-width: 900px) {
   .menu-toggle {
@@ -174,13 +192,13 @@ export default {
     gap: 0.35rem;
     background: var(--white);
     border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 0.6rem;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    transform: translateY(-6px);
+    border-radius: var(--radius-lg);
+    padding: 0.75rem;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-10px);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease;
   }
 
   .nav-links.open {
@@ -192,12 +210,12 @@ export default {
   .nav-links a {
     display: block;
     width: 100%;
-    padding: 0.7rem 0.75rem;
-    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius-md);
   }
 
   .nav-links a:hover {
-    background: rgba(109, 40, 217, 0.08);
+    background: var(--primary-50);
   }
 }
 </style>

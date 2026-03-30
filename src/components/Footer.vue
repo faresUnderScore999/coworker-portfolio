@@ -1,6 +1,9 @@
 <template>
   <footer class="main-footer">
-    <p>© {{ currentYear }} Ikbel Bouzouita — IT Architecture & Cloud Computing Student ⚡</p>
+    <div class="footer-content">
+      <p class="copyright">© {{ currentYear }} Ikbel Bouzouita</p>
+      <p class="tagline">IT Architecture & Cloud Computing Student ⚡</p>
+    </div>
   </footer>
 </template>
 
@@ -10,7 +13,7 @@ export default {
   data() {
     return {
       currentYear: new Date().getFullYear()
-    };
+    }
   }
 }
 </script>
@@ -18,17 +21,28 @@ export default {
 <style scoped>
 .main-footer {
   margin-top: 2rem;
-  padding: 1.25rem;
+  padding: 1.5rem;
   text-align: center;
   color: var(--text-muted);
-  background: var(--bg-1);
-  border-top: 1px solid var(--line);
-  box-shadow: 0 -10px 35px rgba(109, 40, 217, 0.08);
+  background: var(--white);
+  border-top: 1px solid var(--line-light);
 }
 
-p {
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.copyright {
   margin: 0;
   font-size: 0.95rem;
-  letter-spacing: 0.3px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.tagline {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }
 </style>
