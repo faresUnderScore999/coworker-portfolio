@@ -18,7 +18,7 @@
         <span class="contact-label">Alt Phone</span>
         <span class="contact-value">+216 50 988 691</span>
       </a>
-      <a href="https://www.linkedin.com/in/ikbel-bouzouita/" target="_blank" rel="noopener noreferrer" class="contact-card">
+      <a href="https://www.linkedin.com/in/ikbel-bouzouita-09ba94234/" target="_blank" rel="noopener noreferrer" class="contact-card">
         <span class="contact-icon">💼</span>
         <span class="contact-label">LinkedIn</span>
         <span class="contact-value">Connect with me</span>
